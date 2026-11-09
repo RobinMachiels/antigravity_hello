@@ -1,0 +1,19 @@
+{
+  "name": "north-pole-64",
+  "version": "1.0.0",
+  "description": "Interactive Three.js North Pole scene with Santa's workshop, Christmas trees, falling snow, and shimmering stars in a retro 64-bit pixel-art style.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [
+    "threejs",
+    "pixel-art",
+    "north-pole",
+    "christmas",
+    "retro-3d",
+    "webgl"
+  ],
+  "author": "",
+  "license": "MIT"
+}

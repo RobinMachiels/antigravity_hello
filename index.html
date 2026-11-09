@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>North Pole 64 - Three.js Pixel-Art Scene</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Three.js Import Map -->
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+      "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+    }
+  }
+  </script>
+</head>
+<body>
+  <!-- 3D Canvas Container -->
+  <div id="canvas-container"></div>
+
+  <!-- Notification Toast -->
+  <div id="toast">Welcome to the North Pole!</div>
+
+  <!-- Retro 64-bit HUD Overlay -->
+  <div id="ui-overlay">
+    <!-- Top Header -->
+    <header class="hud-header">
+      <div class="title-card interactive">
+        <h1>★ NORTH POLE 64 ★</h1>
+        <p class="subtitle">90° 00' 00" N • Retro 64-Bit Arctic Realm</p>
+      </div>
+
+      <div class="hud-actions-top interactive">
+        <!-- Lights Toggle -->
+        <button id="btn-lights" class="retro-btn btn-light active" title="Toggle Santa's Workshop Lights">
+          💡 Lights: ON
+        </button>
+
+        <!-- Music Box Toggle -->
+        <button id="btn-music" class="retro-btn" title="Toggle Festive Chiptune Music Box">
+          🔇 Music: OFF
+        </button>
+
+        <!-- Pixel Scale Selector -->
+        <div class="retro-select-wrapper">
+          <label for="select-pixel">PIXELS:</label>
+          <select id="select-pixel" class="retro-select">
+            <option value="4" selected>4x 64-Bit</option>
+            <option value="2">2x Sharp</option>
+            <option value="6">6x Ultra</option>
+            <option value="1">1x Smooth</option>
+          </select>
+        </div>
+
+        <!-- Palette Quantization Toggle -->
+        <button id="btn-palette" class="retro-btn active" title="Toggle 64-Bit Color Quantization & Dithering">
+          👾 64-Bit Palette
+        </button>
+
+        <!-- Instructions Toggle -->
+        <button id="btn-toggle-hint" class="retro-btn active" title="Show/Hide Mouse Instructions">
+          ℹ️ Info
+        </button>
+      </div>
+    </header>
+
+    <!-- Center Interactive Hint -->
+    <div id="hud-hint" class="hud-hint interactive">
+      <span class="hint-text">🖱️ Drag mouse to look around • Scroll to zoom • Click workshop window for lights • Click gifts</span>
+      <button id="btn-close-hint" class="hint-close-btn" title="Hide mouse instructions" aria-label="Close mouse instructions">✕</button>
+    </div>
+
+    <!-- Bottom Camera Controls -->
+    <footer class="hud-footer">
+      <div class="cam-bar interactive">
+        <span class="cam-label">🎥 VIEWS:</span>
+        <button id="btn-cam-overview" class="cam-btn">🌐 Overview</button>
+        <button id="btn-cam-workshop" class="cam-btn">🏠 Workshop</button>
+        <button id="btn-cam-northpole" class="cam-btn">💈 North Pole</button>
+        <button id="btn-cam-tree" class="cam-btn">🎄 Main Tree</button>
+        <button id="btn-orbit" class="cam-btn">🔄 Auto-Orbit</button>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Application Entry Point -->
+  <script type="module" src="./js/main.js"></script>
+</body>
+</html>
